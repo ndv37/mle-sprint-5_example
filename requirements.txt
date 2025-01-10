@@ -1,0 +1,6 @@
+numpy==1.26.4
+causalml==0.15.1
+
+fastapi==0.112.0
+uvicorn==0.30.6
+statsd==4.0.1 
