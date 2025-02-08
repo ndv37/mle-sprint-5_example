@@ -1,0 +1,14 @@
+FROM python:3.9-slim
+
+WORKDIR mle-sprint-5_example
+
+# установим необходимые библиотеки
+RUN apt-get update && apt-get install -y libgomp1
+
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt
+
+COPY . ./mle-sprint-5_example
+# COPY # ваш код здесь
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
